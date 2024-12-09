@@ -1,22 +1,53 @@
-# SmartHome System  
+# Smart Home Project
 
-## **Mô tả dự án**  
-Dự án SmartHome được thiết kế nhằm tích hợp công nghệ IoT với các vi điều khiển **ESP32** và **STM32** để xây dựng một hệ thống nhà thông minh. Hệ thống cung cấp khả năng giám sát và điều khiển từ xa thông qua Firebase và ứng dụng di động, đồng thời hỗ trợ tự động hóa các thiết bị như quạt, đèn, bơm nước và cửa ra vào.  
+This project implements a smart home model using STM32 and ESP32, allowing users to control and monitor their home environment through a mobile application and an HMI touchscreen.
 
----
+## Features
 
-## **Chức năng chính**  
-1. **ESP32 DEVKIT V1:**  
-   - Gửi trạng thái cảm biến và thiết bị lên Firebase và màn hình cảm ứng HMI.  
-   - Kết nối cảm biến nhiệt độ, độ ẩm (DHT11) và nhận dữ liệu từ STM32 (cảm biến khí gas MQ-2) qua UART.  
-   - Nhận lệnh điều khiển từ Firebase (MIT App Inventor) để bật/tắt thiết bị như đèn, quạt, máy bơm, hoặc cửa ra vào.  
-   - Quản lý cảm biến vân tay AS608 để hỗ trợ bảo mật mở cửa tự động.  
+* **Lighting control:** Turn lights on/off in different rooms.
+* **Environmental monitoring:** Monitor temperature, humidity, and gas levels in real-time.
+* **Appliance control:** Control fans and water pumps remotely.
+* **Security:** Secure door access with fingerprint authentication.
+* **Fire alarm:**  Detect potential fire hazards with gas and temperature sensors, triggering an alarm and sending notifications.
+* **Automated watering:** Automatically activate a water pump based on soil moisture levels.
+* **Dual control interface:** Control and monitor the system through both a mobile application and an HMI touchscreen.
 
-2. **STM32F103C8T6:**  
-   - Thu thập dữ liệu từ cảm biến khí gas (MQ-2) và gửi dữ liệu đến ESP32 qua UART để hiển thị và cảnh báo.  
-   - Điều khiển thiết bị như quạt, đèn, máy bơm và cửa ra vào theo lệnh từ ESP32.  
-   - Thu thập dữ liệu cảm biến độ ẩm đất và tự động bật máy bơm khi độ ẩm thấp.  
+## Hardware Components
 
-3. **Màn hình cảm ứng (HMI):**  
-   - Hiển thị thông số cảm biến (nhiệt độ, độ ẩm, khí gas).  
-   - Điều khiển trực tiếp các thiết bị thông qua giao diện cảm ứng.  
+* STM32F103C8T6 (Blue Pill) microcontroller
+* ESP32 DEVKIT V1
+* HMI TJC4832K035_011RN 3.5 inch touchscreen
+* MQ-2 Gas Sensor (LPG/CO/CH4)
+* DHT11 Temperature and Humidity Sensor
+* SG90 Servo Motor
+* 5x5x1.5cm 12VDC Cooling Fan 
+* AS608 Fingerprint Sensor
+* LM2596 Buck Converter
+* PC817 Optocoupler
+* Diodes
+* Resistors
+* Capacitors
+* MOSFETs
+* Transistors
+* Jumper wires
+* Breadboard
+
+## Software Requirements
+
+* Arduino IDE
+* STM32CubeIDE
+* Firebase library (for ESP32)
+* TJC software (for HMI)
+* MIT App Inventor (for mobile application development)
+
+## Installation and Usage
+
+Please refer to the report "Nghiên cứu tích hợp hệ thống điều khiển tự động nhà thông minh sử dụng STM32 và ESP32" for detailed information on hardware and software setup, circuit diagrams, code implementation, and usage instructions.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or have suggestions for improvement, please feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [License Name] License - see the [LICENSE](LICENSE) file for details.
