@@ -125,7 +125,7 @@ void loop() {
     Serial.println(rev);
     if (rev.length()>=7)
     {
-//      Serial.println(rev); nhan du lieu stm32 gui qua va chuyen dinh dang
+
       String ss1 = rev.substring(0,2);
       String ss2 = rev.substring(3,5);
       String ss3 = rev.substring(6);
@@ -138,7 +138,7 @@ void loop() {
     }
   }
   
-  h1 = dht1.readHumidity(); ///////////////////////////////////////////////////////
+  h1 = dht1.readHumidity(); 
   t1 = dht1.readTemperature();
   h2 = dht2.readHumidity();
   t2 = dht2.readTemperature();
