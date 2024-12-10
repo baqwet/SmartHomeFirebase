@@ -1,5 +1,5 @@
 # Smart Home Project
-
+# Nghiên cứu tích hợp hệ thống điều khiển tự động nhà thông minh sử dụng STM32 và ESP32
 This project implements a smart home model using STM32 and ESP32, allowing users to control and monitor their home environment through a mobile application and an HMI touchscreen.
 
 ## Features
